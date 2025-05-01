@@ -1,25 +1,23 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import WelcomePage from './components/WelcomePage';
 // import About from './components/About'
-import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import JobOpportunities from "./components/JobOpportunities";
-import StatsSection from "./components/StatsSection";
 import Navbar from "./components/Navbar";
-import CompanyOverview from "./routes/Company";
-import Company from "./routes/Company";
-import LeaderShip from "./routes/LeaderShip";
+import StatsSection from "./components/StatsSection";
+import Blogs from "./routes/Blogs";
+import Categories from "./routes/Categories";
+import CompanyBody from "./routes/CompanyBody";
+import ContactUs from "./routes/ContactUs";
+import ContactUsBody from "./routes/ContactUsBody";
+import JobOpportunities01 from "./routes/JobOpportunities01";
+import LeadershipBody from "./routes/LeadershipBody";
+import ServiceOffer from "./routes/ServiceOffer";
 import SubmitRequirement from "./routes/SubmitRequirement";
 import SubmitResume from "./routes/SubmitResume";
-import Categories from "./routes/Categories";
-import ServiceOffer from "./routes/ServiceOffer";
-import JobOpportunities01 from "./routes/JobOpportunities01";
-import Blogs from "./routes/Blogs";
-import ContactUs from "./routes/ContactUs";
 import SubmitResumeBody from "./routes/SubmitResumeBody";
-import ContactUsBody from "./routes/ContactUsBody";
-
 const App = () => {
   return (
     <div className="w-full overflow-hidden scroll-smooth">
@@ -31,14 +29,31 @@ const App = () => {
             <>
               <Header />
               <StatsSection />
+              <WelcomePage />
               <JobOpportunities />
               {/* <Projects /> */}
               <Footer />
             </>
           }
         />
-        <Route path="/CompanyOverview" element={<Company />} />
-        <Route path="/LeadershipTeam" element={<LeaderShip />} />
+        <Route 
+          path="/CompanyOverview"
+          element={
+          <>
+          <CompanyBody />
+          <Footer />
+          </>
+          }
+        />
+        <Route 
+          path="/LeadershipTeam" 
+          element={
+          <>
+          <LeadershipBody />
+          <Footer />
+          </>
+          }
+        />
         <Route path="/SubmitRequirement" element={<SubmitRequirement />} />
         <Route path="/ServiceOffer" element={<ServiceOffer />} />
         <Route

@@ -21,6 +21,7 @@ const Company = () => {
           <a href="#Contact" className="bg-blue-500 px-8 py-3">Contact Us</a> */}
         </div>
       </div>
+
     </div>
   );
 };
